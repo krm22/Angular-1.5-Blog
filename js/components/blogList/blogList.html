@@ -2,14 +2,14 @@
     <div class="row">
         <ul class="containerb">
             <li>
-                <h1 ng-click="editMode = true" ng-hide="editMode " class="editMode-label">{{$ctrl.blog.title}}</h1>
-                <input ng-change="blog.editMode = true" ng-blur="editMode = false;" ng-show="editMode" ng-model="blog.title" class="editMode-label" type="text" />
+                <h1 ng-click="editMode = true" ng-hide="editMode" class="editMode-label">{{$ctrl.blog.title}}</h1>
+                <input ng-change="blog.editMode = true" ng-blur="editMode = false;" ng-show="editMode" ng-model="$ctrl.blog.title" class="editMode-label" type="text" />
                 <p ng-click="editMode = true" ng-hide="editMode" class="editMode-label">{{$ctrl.blog.author}}</p>
-                <input ng-change="blog.editMode = true" ng-blur="editMode = false;" ng-show="editMode" ng-model="blog.author" class="editMode-label" name="author" type="text" />
+                <input ng-change="blog.editMode = true" ng-blur="editMode = false;" ng-show="editMode" ng-model="$ctrl.blog.author" class="editMode-label" name="author" type="text" />
                 <p ng-click="editMode = true" ng-hide="editMode " class="editMode-label">{{$ctrl.blog.PublishedAt}}</p>
-                <input ng-change="blog.editMode = true" ng-blur="editMode = false;" ng-show="editMode" ng-model="blog.PublishedAt" class="editMode-label" name="" type="text" />
+                <input ng-change="blog.editMode = true" ng-blur="editMode = false;" ng-show="editMode" ng-model="$ctrl.blog.PublishedAt" class="editMode-label" name="" type="text" />
                 <p ng-click="editMode = true" ng-hide="editMode" class="editMode-label">{{$ctrl.blog.content}} </p>
-                <textarea ng-change="blog.editMode = true" ng-blur="editMode = false;" ng-show="editMode" ng-model="blog.content" class="editMode-label" name="" type="text"</textarea>
+                <textarea ng-change="blog.editMode = true" ng-blur="editMode = false;" ng-show="editMode" ng-model="blog.content" class="editMode-label" name="" type="text"></textarea>
             </li>
             <button class="btn-link" ng-click="$ctrl.blog.add(blog)">Save</button>
             <button class="btn-link" ng-click="$ctrl.blog.delete(blog,index)">Delete</button>
