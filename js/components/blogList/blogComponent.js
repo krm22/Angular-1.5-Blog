@@ -14,10 +14,14 @@ component('blog', {
 
         this.delete = (blog, index) => {
             this.blog.splice(blog, 1);
+            console.log("This blog is deleted")
         };
 
         this.editMode = (blog, index) => {
             this.blog.editMode = true;
+
+        let date = new Date();
+        this.hhmm = (new Date(), 'hh:mm');
 
         };
     }
