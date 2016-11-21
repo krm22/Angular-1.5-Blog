@@ -3,7 +3,7 @@
     app.service('postsService', function($http) {
         return {
             get() {
-                return $http.get('mock/posts.json')
+                return $http.get('/api/posts')
             },
 
             add(blog) {
@@ -20,4 +20,4 @@
         }
     })
 
-})(angular.module('app.services'))
+})(angular.module('app.services', []));

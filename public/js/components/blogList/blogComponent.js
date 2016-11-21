@@ -1,11 +1,11 @@
-angular.
-module('app.blogComponent', []).
+angular.module('app.blogComponent', []).
 component('blog', {
     templateUrl: 'js/components/blogList/blogList.html',
     controller: function($stateParams, postsService) {
 
         postsService.get().then((response) => {
-            this.blog = response.data[$stateParams.position];
+            this.blog = response.data.blog[$stateParams.position];
+                this.blog = posts;
         });
 
         this.add = (blog) => {

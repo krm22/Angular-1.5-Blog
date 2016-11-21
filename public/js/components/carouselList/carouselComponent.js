@@ -1,5 +1,5 @@
- angular.
-module('app.carouselComponent', []).
+
+angular.module('app.carouselComponent', []).
 component('carousel', {
   templateUrl: 'js/components/carouselList/carouselList.html',
   controller: function carouselController(postsService) {
