@@ -5,18 +5,18 @@
         function($locationProvider, $stateProvider, $urlRouterProvider) {
             $locationProvider.hashPrefix('!');
             $urlRouterProvider.otherwise('/');
-            $stateProvider.state('app', {
+            $stateProvider.state('blog', {
                     template: '<home></home>',
                     url: '',
                     abstract: true
                 })
-                .state('app.carousel', {
-                    template: '<carousel></carousel>',
+                .state('blog.list', {
+                    template: '<blog-list></blog-list>',
                     url: '/'
                 })
-                .state('app.blog', {
-                    template: '<blog></blog>',
-                    url: '/blog/:position'
+                .state('blog.item', {
+                    template: '<blog-item></blog-item>',
+                    url: '/blog/:id'
                 });
         }
     ]);

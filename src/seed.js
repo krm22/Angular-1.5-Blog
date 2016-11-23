@@ -1,4 +1,10 @@
-[{
+'use strict'
+
+// Blog is the name of the model it's assigned the model and schema from mongoose.
+let Blog = require('./models/blog.js');
+
+//create fake data
+let posts = [{
     "title": "Lorem Ipsum",
     "author": "Redactor",
     "PublishedAt": "1478516400",
@@ -19,3 +25,17 @@
     "PublishedAt": "1478775600",
     "content": "Fusce sed sapien sit amet magna hendrerit volutpat. Morbi non ex vitae ipsum iaculis ultrices ac in quam. Morbi nec ex at est laoreet consectetur. Cras viverra posuere dictum. Phasellus lectus turpis, aliquet ac odio nec, sollicitudin fermentum turpis. Maecenas malesuada rutrum sodales. Integer eleifend quis nulla eget suscipit. Fusce eu nulla ac elit congue facilisis. Phasellus in risus faucibus, porttitor justo nec, pellentesque dolor. Suspendisse potenti."
 }]
+
+
+//loop through arrays and apply a function to every index.
+posts.forEach(function(post, index) {
+      //Blog is the model of mongoose exported by express from blog.js
+    Blog.find(post, function(err, posts){
+        if (!err && !posts.length) {
+            Blog.create(post);
+        }
+    });
+});
+
+
+//

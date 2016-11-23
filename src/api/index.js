@@ -1,24 +1,20 @@
-'use strict'
-
+'use strict.'
 let express = require('express');
+let fs = require('fs')
 
-//assigning post.json to the posts variable.
-let posts = require('../../mock/posts.json');
+module.exports = (app) => {
+    const ROUTER = express.Router()
 
-//router method of express
-let router = express.Router();
+    fs.readdir('./src/api', (err, files) => {
+        if (err) throw err
+        else {
+            files.forEach((file) => {
+                let controller = file.substr(0, file.lastIndexOf('.'))
+                if (controller !== 'index') require('./' + controller)(ROUTER)
+            })
+        }
 
-//mounting router method to get
-router.get('/posts', function(req, res){
-    res.json(posts);
-})
+    })
 
-//TODO: Add POST route to create new entries
-
-//TODO: Add PUT route to create new entries
-
-//TODO: Add DELETE route to create new entries
-
-
-//exposing the router by exporting
-module.exports = router;
+    return ROUTER
+}

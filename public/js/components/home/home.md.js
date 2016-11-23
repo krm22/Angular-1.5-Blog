@@ -3,4 +3,4 @@
 
 //Declaration of the module/component
 
-})(angular.module('app.carousel', []));
+})(angular.module('app.home', []));

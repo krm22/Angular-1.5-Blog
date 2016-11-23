@@ -4,7 +4,6 @@
     'ui.router',
     'app.config',
     'app.services',
-    'app.blogComponent',
-    'app.homeComponent',
-    'app.carouselComponent'
+    'app.home',
+    'app.blog'
 ]))
