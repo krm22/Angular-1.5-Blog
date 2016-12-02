@@ -29,7 +29,13 @@
                         console.log('search prev blog');
                     }
 
+                    let date = new Date();
+                    this.hhmm = (new Date(), 'hh:mm');
 
+                    this.carouselstate = 3
+                    this.loadMore = () => {
+                        this.carouselstate += 3
+                    };
 
 
 

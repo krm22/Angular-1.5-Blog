@@ -15,15 +15,12 @@
             };
 
             this.saveBlogs = (blog) => {
-              debugger
-              postsService.save(blog).then((res) =>{
+                postsService.save(blog).then((res) =>{
                 console.log("SUCESS")
               });
             }
 
-
-
-            this.resetTodoState = () => {
+              this.resetTodoState = () => {
                 this.blogs.forEach(function(blog) {
 
                 })
