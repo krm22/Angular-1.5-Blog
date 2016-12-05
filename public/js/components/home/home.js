@@ -3,18 +3,11 @@
         templateUrl: 'js/components/home/home.html',
         controller: function(postsService) {
 
-
-
                 this.carouselstate = 3
                 this.loadMore = () => {
                     this.carouselstate += 3
+
                 };
-
-
-
-
-
-
-      }
+          }
     }); //dont delete
 })(angular.module('app.home'))
