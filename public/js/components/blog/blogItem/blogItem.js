@@ -9,7 +9,7 @@
 
             postsService.get().then((response) => {
                 this.blogs = response.data;
-                console.log(this.blogs);
+                /*console.log(this.blogs);*/
             });
 
             this.next = () => {
@@ -58,7 +58,10 @@
             let date = new Date();
             this.hhmm = (new Date(), 'hh:mm');
 
-              /*this.carouselstate = 0
+
+
+
+                          /*this.carouselstate = 0
 
                             this.next = () => {
                                 this.carouselstate ==
