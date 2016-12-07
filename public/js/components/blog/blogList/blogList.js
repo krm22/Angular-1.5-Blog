@@ -44,4 +44,4 @@
 
               } //dont delete
         }); //dont delete
-})(angular.module('app.blog'))
+})(require('angular').module('app.blog'))

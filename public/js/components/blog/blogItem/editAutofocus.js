@@ -18,6 +18,6 @@ function editAutofocus() {
 }
 
 
-angular
+require('angular')
     .module('app.blog')
     .directive('editAutofocus', editAutofocus);
