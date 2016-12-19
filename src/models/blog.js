@@ -10,7 +10,7 @@ let mongoose = require('mongoose');
 let blogSchema = new mongoose.Schema({
     title: String,
     author: String,
-    PublishedAt: String,
+    PublishedAt: Date,
     content: String
 });
 

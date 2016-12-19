@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/app.js",
+  "scripts":{
+  "postinstall": "brunch build --production",
+  "start": "node ./src/app.js",
+  "dev":"brunch watch --server"
+},
   "dependencies": {
     "angular": "^1.5.8",
     "angular-ui-router": "^0.3.2",
@@ -11,6 +16,12 @@
     "method-override": "^2.3.7",
     "mongoose": "^4.6.8",
     "node": "^0.0.0"
+  },
+  "engines":{
+    "node":"6.6.0"
+  },
+  "repository":{
+    "url": "https://git.heroku.com/mean-blog-demo.git"
   },
   "devDependencies": {
     "auto-reload-brunch": "^2.7.1",

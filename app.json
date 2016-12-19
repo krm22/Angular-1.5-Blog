@@ -1,0 +1,6 @@
+{
+"name":"mean-blog-demo",
+"description":"A simple blog ",
+"repository": "https://git.heroku.com/mean-blog-demo.git",
+"keywords":["node", "express", "angular", "mongolab"],
+}
