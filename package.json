@@ -15,15 +15,7 @@
     "express": "^4.14.0",
     "method-override": "^2.3.7",
     "mongoose": "^4.6.8",
-    "node": "^0.0.0"
-  },
-  "engines":{
-    "node":"6.6.0"
-  },
-  "repository":{
-    "url": "https://git.heroku.com/mean-blog-demo.git"
-  },
-  "devDependencies": {
+    "node": "^0.0.0",
     "auto-reload-brunch": "^2.7.1",
     "babel-brunch": "^6.0.6",
     "brunch": "^2.9.1",
@@ -31,8 +23,11 @@
     "javascript-brunch": "^2.0.0",
     "sass-brunch": "^2.7.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "engines":{
+    "node":"6.6.0"
+  },
+  "repository":{
+    "url": "https://git.heroku.com/mean-blog-demo.git"
   },
   "author": "",
   "license": "ISC"
