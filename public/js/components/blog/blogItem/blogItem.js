@@ -7,6 +7,7 @@
                 this.blog = response.data;
             });
 
+
             postsService.get().then((response) => {
                 this.blogs = response.data;
                 /*console.log(this.blogs);*/
@@ -19,18 +20,19 @@
                 let index = this.blogs.findIndex((blog) => blog._id === this.blog._id)
                 index++
                 let next_blog = this.blogs[index]
-                $state.go('blog.item', {id: next_blog._id})
+                $state.go('blog.item', {
+                  id: next_blog._id
+                })
             }
-
 
             this.prev = () => {
               let index = this.blogs.findIndex((blog) => blog._id === this.blog._id)
               index--
               let next_blog = this.blogs[index]
-              $state.go('blog.item', {id: next_blog._id})
+              $state.go('blog.item', {
+                id: next_blog._id
+              })
             }
-
-
 
             this.delete = (blog) => {
                 postsService.delete(blog).then((response) => {
@@ -45,10 +47,10 @@
                 });
             }
 
-            this.resetTodoState = () => {
-                this.blogs.forEach(function(blog) {
-
-                })
+            this.createBlog = (company) => {
+                postsService.save(blog).then((res) => {
+                    console.log("Your Contact Has Been Saved and Updated")
+                });
             }
 
             this.editMode = (blog, index) => {
@@ -58,28 +60,6 @@
             let date = new Date();
             this.hhmm = (new Date(), 'hh:mm');
 
-
-
-
-                          /*this.carouselstate = 0
-
-                            this.next = () => {
-                                this.carouselstate ==
-                                    this.blog.length - 1 ?
-                                    this.carouselstate = 0 :
-                                    this.carouselstate++
-                                    console.log('search next blog');
-                            }
-
-                            this.prev = () => {
-                                this.carouselstate < 1 ?
-                                    this.carouselstate =
-                                    this.blog.length - 1 :
-                                    this.carouselstate--;
-                                console.log('search prev blog');
-                            }*/
-
-
-        }
+          }
     }); //dont delete
 })(require('angular').module('app.blog'))
