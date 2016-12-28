@@ -7,5 +7,5 @@
     'app.services',
     'app.home',
     'app.login',
-    'app.blog',
+    'app.blog'
 ]))
