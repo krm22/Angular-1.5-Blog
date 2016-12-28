@@ -14,5 +14,7 @@ let blogSchema = new mongoose.Schema({
     content: String
 });
 
+
+
 // creating and exporting model with the model method of mongoose.
 module.exports = mongoose.model('Blog', blogSchema);
