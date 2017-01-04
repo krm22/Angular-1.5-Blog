@@ -1,4 +1,13 @@
+# MacOS
 .DS_Store
+
+# Modules
 node_modules/
+
+# Built files by brunch
 public/js/*.min.*
 public/css/
+
+# Config
+config/dev.js
+config/config.js

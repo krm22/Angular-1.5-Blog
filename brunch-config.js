@@ -28,7 +28,7 @@ exports.config = {
     },
     npm: {
         enabled: true,
-        compilers: ['angular', 'angular-ui-router', 'angular-cookies']
+        compilers: ['angular', 'angular-ui-router', 'angular-cookies', 'angular-materialize', 'jquery']
     },
     conventions: {
         assets: /static[\\/]/,
@@ -54,5 +54,9 @@ exports.config = {
                 }
             }
         }
+    },  server: {
+        path: 'app.js',
+        port: 8000,
+        run: true
     }
-}
+};

@@ -1,26 +1,35 @@
+/*
+Create Angular component blogList into module app.blog
+*/
 ((app) => {
+    'use strict'
     app.component('blogList', {
-            templateUrl: 'js/components/blog/blogList/blogList.html',
-            controller: function(postsService) {
+        templateUrl: 'js/components/blog/blogList/blogList.html',
+        controller: ['UsersService', 'postsService', function(UsersService, postsService) {
+            // Define startIndex variable with default value 3
+            this.startIndex = 3
 
-                    postsService.get().then((response) => {
-                        this.posts = response.data
-                    });
+            // Call getCurrent() method from UsersService.
+            // When this request receive response we affect response data to this controller variable user
+            UsersService.getCurrent().then((user) => {
+                this.user = user
+            }).catch((err) => {
 
-                    this.add = (post) => {
-                        this.posts.push(this.posts),
-                            console.log('this has been added');
-                    };
+            });
 
-                    let date = new Date();
-                    this.hhmm = (new Date(), 'hh:mm');
+            // Call get() method from PostsService.
+            // When this request receive response we affect response data to this controller variable posts
+            postsService.get().then((res) => {
+                this.posts = res.data
+            })
 
+            // Create loadMore function.
+            // If you want to use in view, you can call with $ctrl.loadMore()
+            this.loadMore = () => {
+                // Add 3 to startIndex
+                this.startIndex += 3
+            }
 
-                    this.carouselstate = 3
-                    this.loadMore = () => {
-                        this.carouselstate += 3
-                    };
-
-             } //dont delete
-        }); //dont delete
+        }]
+    })
 })(require('angular').module('app.blog'))

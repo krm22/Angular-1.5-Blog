@@ -60,7 +60,7 @@ module.exports = (router) => {
                 err: 'Ids do not match!'
             })
         }
-        //Post model of mongoose finds id and update.
+        //Post model of mongoose finds id's and update them.
         Post.findByIdAndUpdate(id, post, {
             new: true
         }, function(err, post) {
